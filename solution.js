@@ -50,3 +50,20 @@ console.log(plusFive(-8)); // returns 3
 const plusTen = makePlusFunction(10);
 console.log(plusTen(0)); // returns 10
 console.log(plusTen(188)); // returns 198
+
+console.log();
+console.log("Aufgabe 4");
+
+function colorPatternTimes(Array) {
+    let count = 0;
+    for (let i = 0; i < Array.length - 1; i++) {
+        if (Array[i] != Array[i + 1]) {
+            count++;
+        }
+    }
+    return Array.length * 2 + count;
+}
+console.log(colorPatternTimes(["Red", "Blue", "Red", "Blue", "Red"]));
+console.log(colorPatternTimes(["Red", "Yellow", "Green", "Blue"]));
+console.log(colorPatternTimes(["Blue", "Blue", "Blue", "Red", "Red", "Red"]));
+console.log(colorPatternTimes(["Blue"]));
