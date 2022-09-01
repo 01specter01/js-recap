@@ -29,10 +29,10 @@ class Kreis {
     }
 }
 let kreis1 = new Kreis(11);
-console.log(kreis1.getArea()); // Should return 380.132711084365
+console.log(kreis1.getArea()); //Should return 380.132711084365
 
 let kreis = new Kreis(4.44);
-console.log(kreis.getPerimeter()); // Should return 27.897342763877365
+console.log(kreis.getPerimeter()); //Should return 27.897342763877365
 
 console.log();
 console.log("Aufgabe 3");
@@ -67,3 +67,28 @@ console.log(colorPatternTimes(["Red", "Blue", "Red", "Blue", "Red"]));
 console.log(colorPatternTimes(["Red", "Yellow", "Green", "Blue"]));
 console.log(colorPatternTimes(["Blue", "Blue", "Blue", "Red", "Red", "Red"]));
 console.log(colorPatternTimes(["Blue"]));
+
+console.log("Callback");
+
+function foo(bar) {
+    bar();
+}
+
+foo(function () {
+    console.log("bar");
+});
+
+//Pizza Hub
+function orderPizza(type, name, callback) {
+    console.log("Ordering pizza...");
+    setTimeout(function () {
+        let msg = `Your ${type} ${name} Pizza is ready! The total bill is $13!`;
+        console.log(`On the Pizzahub server: ${msg}`);
+        callback(msg);
+    }, 7000);
+}
+
+//Robin's Phone
+orderPizza("veg", "cheese", function (msg) {
+    console.log(`On Robin's phone: ${msg}`);
+});
